@@ -21,9 +21,16 @@ description:         Please see the README on GitHub at <https://github.com/gith
 
 dependencies:
 - base >= 4.7 && < 5
+- network >= 2.8
+- text 
+- http-client
+- http-types
+- process
+- stm
 
 library:
   source-dirs: src
+
 
 executables:
   purescript-repl-exe:
@@ -35,6 +42,7 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - purescript-repl
+    - process
 
 tests:
   purescript-repl-test:
